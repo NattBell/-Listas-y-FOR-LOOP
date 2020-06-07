@@ -24,9 +24,10 @@ listaDeNumeros [11]
 # En la posicion 11 esta el numero 15
 
 ## número mayor a la cantidad de elementos de la lista o un número negativo?
-listaDeNumeros [12]
-# La consola arroja que es nulo 
 
+listaDeNumeros [12]
+
+# La consola arroja que es nulo 
 
 # Ejercicio 2: A continuación se le presenta la función unlist, 
 # la cual se puede usar de la siguiente manera: unlist(listaDeNumeros[5]) 
@@ -145,13 +146,158 @@ for (i in listaDeNumeros) {
 
 ## Ejercicio 8: Usando los condicionales vistas en clases, adapte 
 ## el código anterior para que muestre si un número es par o impar. 
+
+numeroPar -> TRUE
+numeroImpar -> FALSE
+
+for (i in listaDeNumeros) {
+}
+ numeroPar <- function (listaDeNumeros){
+  return(listaDeNumeros%%2==0)
+  print(numeroPar)
+}
+numeroPar(unlist(listaDeNumeros))
+unlist(listaDeNumeros)
+
+listadoNumeroParEimpar <- c(numeroPar(unlist(listaDeNumeros)),listaDeNumeros)
+listadoNumeroParEimpar
+
+## Ejercicio 9: Como vimos en clases anteriores  el uso de condicionales 
+## es útil para tomar decisiones respecto a ciertas opciones que se presentan,
+## para practicar esta metodología se le pida que resuelva el 
+## siguiente ejercicio. 
+
+## Suponga que existe un sistema de plebiscitos (resultado SI o NO) 
+## con las siguientes reglas: 
+## - El padrón electoral consiste de total personas (número entero). 
+## - Hay dos opciones de voto: SI o NO. La cantidad de votos se representan 
+## con las variables votosSI y votosNO (números enteros). 
+## - Considerando que el quórum corresponde al 50% + 1 del padrón electoral: 
+##  ??? Si hay menos votos que el quórum, pero una de las opciones (SI o NO) 
+## tiene una votación mayor o igual al 30%, gana dicha opción. Si no, 
+## no hay quórum y gana la opción NO. 
+##  ??? Si hay suficientes votos para el quórum, gana la opción con más votos.
+## En caso de empate, gana la opción SI. 
+## - Suponga que no hay votos blancos o nulos.
+## Implemente una función que reciba los parámetros total, 
+## votosSI y votosNO, y devuelva un String con la opción ganadora 
+## ('SI' o 'NO'). No olvide seguir todos los pasos de la receta de diseño. 
+
+votosSi <- 40
+votosNo <- 30
+padronElectoral <- 136
+quorum <- 69
+
+resultadoDeVotacion <- if (quorum < 69){
+                       opcion <- 
+                       print(opcion)
+                       }else if (votosSi >= 41 || votosNo >= 41){
+                       opcion <- 
+                       print(opcion)
+  
+                       } else { (quorum < 69)
+                       opcion <- votosNo
+                       print(paste("gana la opcion",opcion))
+                       
+    }else if (quorum > 69){
+      print(paste("gana la opcion",opcion))
+                         
+    }else{ 
+      print(paste("gana la opcion",opcion))
+      
+      }
+   
+     
+                       
+      else (vosotsSI == votosNo)
+    opcion <- votosSi
+    print(paste("gana la opcion",opcion))
+   
+   
  
 
+## Ejercicio 10: Una función es un grupo de instrucciones que 
+## toma valores de entradas para generar un resultado.
+## Por ejemplo, si se crea una función que sume dos elementos,
+## a y b, de la siguiente manera: 
+  
+Suma<-function(a,b){      
+    a+b 
+} 
+
+## Y luego de esto ejecute lo siguiente en R: 
+  
+Suma(3,4) 
+
+# ¿Qué resultado genera? 
+
+## El resultado es 7
+
+## Pruébelo con operaciones resta,multiplicación, división
+  
+resta <- function (a,b){
+  a-b
+}
+
+resta (3,4)
+
+# El resultado es -1
+
+multiplicacion <- function(a,b){
+  a*b
+}
+
+multiplicacion(3,4)
+
+# El resultado es 12
+
+division <- function(a,b){
+  a/b
+}
+
+division (3,4)
+
+# El resultado es 0.75
+
+## Ejercicio 11: Cree dos funciones, una que genere 
+## la diferencia entre las áreas de dos rectángulos
+## (área sombreada figura 1) 
+
+diferenciaAreasRectangulo <- function(lado1rec1,lado2rec1,lado1rec2,lado2rec2){
+  
+   restarAreasRectangulo <-  abs(lado1rec1*lado2rec1-lado1rec2*lado2rec2)
+   return(restarAreasRectangulo)
+}
+ 
+diferenciaAreasRectangulo (7,15,5,15) 
 
 
+## y otra de las diferencias de las áreas de un círculo
+# Circulo1
+# pi = 3,14 
+# r = 2
+
+# Circulo2
+# pi = 3,14
+# r = 3
+
+diferenciaAreasCirculo <- function(pi1,r1,pi2,r2){
+  
+  restarAreasCirculo <- abs(pi1*r1**2-pi2*r2**2)
+  return(restarAreasCirculo)
+  
+}
+
+diferenciaAreasCirculo (3.14,2,3.14,3)
 
 
+## Ejercicio 12: Ejecute el siguiente código y diga cuales 
+## son las ventajas y desventajas de hacer un loop con lista
+## o rango 
 
+for( i in listaDeNumeros){   
+ print(i) 
+} 
 
 
 
